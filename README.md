@@ -1,1 +1,37 @@
-# python_udemy
+# 🐍 100 Days of Python 🚀
+
+Welcome to my journey through the **100 Days of Python** course on [Udemy](https://www.udemy.com/)!  
+This repository contains all my daily code, projects, and progress updates as I go from beginner to confident Python programmer.
+
+---
+
+## 📅 Day-by-Day Progress
+
+| Day | Topic / Project | Status |
+|-----|------------------|--------|
+| 1   | Print, Variables, and Strings | ✅ Completed |
+| 2   | to be continued..
+<!-- Keep updating as you go -->
+
+---
+
+## 📌 Course Details
+
+- 📚 **Course Name:** 100 Days of Code: The Complete Python Pro Bootcamp for 2024  
+- 👨‍🏫 **Instructor:** Dr. Angela Yu  
+- 🌐 **Platform:** Udemy  
+- 🔗 [Course Link](https://www.udemy.com/course/100-days-of-code/)
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3
+- VS Code
+- Git & GitHub
+- External libraries as introduced in the course
+
+---
+
+## 🚧 Repo Structure
+
