@@ -31,7 +31,4 @@ This repository contains all my daily code, projects, and progress updates as I 
 - Git & GitHub
 - External libraries as introduced in the course
 
----
-
-## 🚧 Repo Structure
 
