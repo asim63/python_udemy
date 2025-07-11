@@ -17,7 +17,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 
 ## 📌 Course Details
 
-- 📚 **Course Name:** 100 Days of Code: The Complete Python Pro Bootcamp for 2024  
+- 📚 **Course Name:** 100 Days of Code: The Complete Python Pro Bootcamp for 2023 
 - 👨‍🏫 **Instructor:** Dr. Angela Yu  
 - 🌐 **Platform:** Udemy  
 - 🔗 [Course Link](https://www.udemy.com/course/100-days-of-code/)
