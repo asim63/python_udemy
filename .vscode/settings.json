@@ -3,7 +3,7 @@
         "*": false
     },
     "editor.suggestOnTriggerCharacters": false,
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.parameterHints.enabled": false,
     "editor.quickSuggestions": {
         "other": false,
