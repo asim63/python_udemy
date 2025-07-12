@@ -10,8 +10,8 @@ This repository contains all my daily code, projects, and progress updates as I 
 | Day | Topic / Project | Status |
 |-----|------------------|--------|
 | 1   | Print, Variables, and Strings | ✅ Completed |
-| 2   | to be continued..
-<!-- Keep updating as you go -->
+| 2   | Type conversion, number manipulation, tip calculator | ✅ Completed |
+
 
 ---
 
