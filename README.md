@@ -12,6 +12,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 1   | Print, Variables, and Strings | ✅ Completed |
 | 2   | Type conversion, number manipulation, tip calculator | ✅ Completed |
 | 3   | Conditional Statements, Leap year, Adventure Game | ✅ Completed |
+| 4   | Randomization and List | ✅ Completed |
 
 
 ---
