@@ -14,7 +14,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 3   | Conditional Statements, Control Flow | ✅ Completed |
 | 4   | Randomization and List | ✅ Completed |
 | 5   | Python Looping | ✅ Completed |
-
+| 6   | Python functions and while loops | ✅ Completed |
 ---
 
 ## 📌 Course Details
