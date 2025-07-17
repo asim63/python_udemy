@@ -1,7 +1,7 @@
 import random
 from hangman_arts import logo, stages 
 from hangman_words import word_list
-
+import os
 chosen_word = random.choice(word_list)
 print(logo)
 # print(f"Psssts. The word is {chosen_word}")
@@ -14,6 +14,7 @@ for i in chosen_word:
 
 while(result):
     guess_letter = input("Guess a letter: ").lower()
+    cls
     count = 0
     if guess_letter in display:
         print(f"{guess_letter}?. You have already used this word.")
