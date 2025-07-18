@@ -16,6 +16,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 5   | Python Looping | ✅ Completed |
 | 6   | Python functions and while loops | ✅ Completed |
 | 6   | Hangman Game | ✅ Completed |
+| 7   | Function with inputs and Caesar Ciphar | ✅ Completed |
 ---
 
 ## 📌 Course Details
