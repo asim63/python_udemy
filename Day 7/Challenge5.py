@@ -4,14 +4,14 @@ from hangman_words import word_list
 
 chosen_word = random.choice(word_list)
 print(logo)
-print(f"Psssts. The word is {chosen_word}")
+#print(f"Psssts. The word is {chosen_word}")
 result = True
 display = []
 lives = 6
 count = 0
 for i in chosen_word:
     display.append('_')
-
+print(f"{' '.join(display)}")
 while(result):
 
     guess_letter = input("Guess a letter: ").lower()
