@@ -25,11 +25,12 @@ highest_bidder = ''
 for key in bidder_info:
     list.append(bidder_info[key])
 highest_bid = max(list)
+print(list)
 for key in bidder_info:
     if bidder_info[key] == highest_bid:
         highest_bidder = key
 
-print(bidder_info)
+# print(bidder_info)
 print(f"The highest bidder is {highest_bidder}, with ${highest_bid} as the bid.")
 
 
