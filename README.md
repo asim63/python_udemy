@@ -15,8 +15,10 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 4   | Randomization and List | ✅ Completed |
 | 5   | Python Looping | ✅ Completed |
 | 6   | Python functions and while loops | ✅ Completed |
-| 6   | Hangman Game | ✅ Completed |
-| 7   | Function with inputs and Caesar Ciphar | ✅ Completed |
+| 7   | Hangman Game | ✅ Completed |
+| 8   | Function with inputs and Caesar Ciphar | ✅ Completed |
+| 9   | Dictionary and Blind Auction Game | ✅ Completed |
+
 ---
 
 ## 📌 Course Details
