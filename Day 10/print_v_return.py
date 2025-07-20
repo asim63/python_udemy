@@ -1,4 +1,3 @@
-from logo import calc
 import os
 def add(n1,n2):
     return n1+n2
@@ -17,9 +16,8 @@ operations = {
     "/":div
 
 }
-print(calc)
 def calculation():
-    num1 = float(input("Whats the first number: "))
+    num1 = int(input("Whats the first number: "))
     y = True
 
     print("Here are the operations:")
@@ -27,7 +25,7 @@ def calculation():
         print(i)
     while(y):
         symbol = input("Pick an operation from the line above: ")
-        num2 = float(input("Whats the next number: "))
+        num2 = int(input("Whats the next number: "))
         calculation_function = operations[symbol]
         answer = calculation_function(num1,num2)
 
