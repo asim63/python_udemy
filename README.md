@@ -18,6 +18,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 7   | Hangman Game | ✅ Completed |
 | 8   | Function with inputs and Caesar Ciphar | ✅ Completed |
 | 9   | Dictionary and Blind Auction Game | ✅ Completed |
+| 10   | Function with Output, Calculator | ✅ Completed |
 
 ---
 
