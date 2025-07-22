@@ -58,6 +58,7 @@ while(play):
         
     total_your = sum(your_cards)
     total_computer = sum(computer_cards)
+    check_ace(total_your,your_cards)
     print(f"Your cards: {your_cards}, current score: {total_your}")
     print(f"Computer's first hand card: {computer_cards[0]}")
     
@@ -66,7 +67,7 @@ while(play):
         print("Woahhh!! BlackJack . You win the game.")
         
     else:
-        another_card = input("Type 'y' to get another card, type 'n' to pass: ")
+        another_card = input("\nType 'y' to get another card, type 'n' to pass: ")
         another_card = check_valid(total_your, another_card)
         while another_card == 'y' :
             add_card_user()
@@ -74,7 +75,7 @@ while(play):
             check_ace(total_your,your_cards)
             print(f"Your cards: {your_cards}, current score: {total_your}")
 
-            another_card = input("Type 'y' to get another card, type 'n' to pass: ")
+            another_card = input("\nType 'y' to get another card, type 'n' to pass: ")
             total_your = sum(your_cards)
             another_card = check_valid(total_your, another_card)
             
@@ -82,7 +83,7 @@ while(play):
 
             print(f"Your final hand: {your_cards}, final score: {total_your}")
             print(f"Computer's final hand: {computer_cards}, final score: {total_computer} ")
-            print("Oops!! Greater than 21. You Lose.")
+            print("Oops!! Greater than 21. You Lose.\n")
     
         else:
             total_computer = sum(computer_cards)
@@ -101,7 +102,7 @@ while(play):
 
             display_result()
 
-    game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+    game = input("\nDo you want to play a game of Blackjack? Type 'y' or 'n': \n")
     
     if not game == 'y':
         play = False
