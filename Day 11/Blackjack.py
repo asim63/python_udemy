@@ -40,7 +40,7 @@ def check_ace(total_your,your_cards):
 
 def is_game_over(total_your,your_cards):
     """Check for BlackJack"""
-    if total_your == 21 and sum(your_cards) ==2:
+    if total_your == 21 and len(your_cards) ==2:
         return True
 
 game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
