@@ -21,6 +21,8 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 10   | Function with Output, Calculator | ✅ Completed |
 | 11   | Blackjack Capstone Project| ✅ Completed |
 | 12   | Scope and Number Guessing Game| ✅ Completed |
+| 13   | Debugging | ✅ Completed |
+
 ---
 
 ## 📌 Course Details
