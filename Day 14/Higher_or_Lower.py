@@ -11,7 +11,7 @@ def calculate(guess,A,B):
     followers_A = int(A['follower_count'])
     followers_B = int(B['follower_count'])
 
-    if (guess == 'A' and followers_A >= followers_B) or (guess == 'B' and followers_B >= followers_A):
+    if ((guess == 'A' or guess =='a') and followers_A >= followers_B) or ((guess == 'B' or guess =='b') and followers_B >= followers_A):
         return 1
     else:
         return 2
@@ -41,5 +41,6 @@ while(not game_is_over):
         a = b 
     else:
         game_is_over = True
-        print(f"Sorry, you are wrong. Your final score is : {score}.")
+        print(logo)
+        print(f"Sorry, that's wrong. Final Score : {score}.")
     
