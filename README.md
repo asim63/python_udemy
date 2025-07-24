@@ -22,6 +22,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 11   | Blackjack Capstone Project| ✅ Completed |
 | 12   | Scope and Number Guessing Game| ✅ Completed |
 | 13   | Debugging | ✅ Completed |
+| 14   | Higher or Lower Game | ✅ Completed |
 
 ---
 
