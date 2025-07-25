@@ -9,3 +9,5 @@ print(resources)
 calculate_new_resources('espresso',resources)
 calculate_new_resources('espresso',resources)
 print(resources)
+
+print(MENU['latte']['cost'])
