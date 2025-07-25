@@ -1,11 +1,14 @@
 from menu import MENU,resources
+from art import logo
 import os
+
+print(logo)
 money = 0
 def print_resources(amount):
     amount = round(amount,2)
-    print(f"Water: {resources['water']}")
-    print(f"Milk: {resources['milk']}")
-    print(f"Coffee: {resources['coffee']}")
+    print(f"Water: {resources['water']}ml")
+    print(f"Milk: {resources['milk']}ml")
+    print(f"Coffee: {resources['coffee']}g")
     print(f"Money :${amount}")
 
 def calculate_new_resources(user_input,resources):
@@ -15,7 +18,7 @@ def calculate_new_resources(user_input,resources):
 def check_if_enough(user_input,resources):
      """ Checks if the available resource is enough to make the product."""
      for key in MENU[user_input]['ingredients']:
-        if not resources[key] > MENU[user_input]['ingredients'][key]:            
+        if not resources[key] >= MENU[user_input]['ingredients'][key]:            
             print(f"Sorry there is not enough {key}.")
             return 1
 
@@ -58,6 +61,7 @@ while(off):
             if(validity):
                 calculate_new_resources(user_input,resources)
                 print(f"Here is your {user_input}. Enjoy!")
-            
-
-
+    
+    if off == False:
+        print("CLosing the machine.....")
+        
