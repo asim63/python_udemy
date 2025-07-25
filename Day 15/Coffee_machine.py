@@ -5,6 +5,7 @@ import os
 print(logo)
 money = 0
 def print_resources(amount):
+    """Prints the status of the resources that are available."""
     amount = round(amount,2)
     print(f"Water: {resources['water']}ml")
     print(f"Milk: {resources['milk']}ml")
@@ -12,6 +13,7 @@ def print_resources(amount):
     print(f"Money :${amount}")
 
 def calculate_new_resources(user_input,resources):
+    """Calculates the new value of the availabe resources."""
     for key in MENU[user_input]['ingredients']:
         resources[key] -= MENU[user_input]['ingredients'][key]
 
@@ -23,11 +25,16 @@ def check_if_enough(user_input,resources):
             return 1
 
 
-def calculate_money(quarters,dimes,nickles,pennies):
-    amount = quarters*0.25 + dimes*0.1 + nickles*0.05 + pennies*0.01
-    return amount
+def calculate_money():
+    """Calculates the money given by user."""
+    total = int(input("How many quarters?: "))*0.25
+    total += int(input("How many dimes?: "))*0.1
+    total += int(input("How many nickles?: "))*0.05  
+    total += int(input("How many pennies?: "))*0.01
+    return total
 
 def clear_screen():
+    """clears the screen"""
     os.system('cls' if os.name == 'nt' else 'clear')
 validity = True
 off = True
@@ -42,12 +49,7 @@ while(off):
         is_enough = check_if_enough(user_input,resources)
         if not is_enough == 1:
             print("Please insert Coins.")
-            quarters = int(input("How many quarters?: "))
-            dimes = int(input("How many dimes?: "))
-            nickles = int(input("How many nickles?: "))    
-            pennies = int(input("How many pennies?: "))
-
-            user_money = calculate_money(quarters,dimes,nickles,pennies)
+            user_money = calculate_money()
             money += user_money
             if user_money >= MENU[user_input]['cost']:
                 change = user_money - MENU[user_input]['cost']
@@ -64,4 +66,5 @@ while(off):
     
     if off == False:
         print("CLosing the machine.....")
+        clear_screen()
         
