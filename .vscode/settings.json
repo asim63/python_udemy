@@ -2,9 +2,9 @@
     "github.copilot.enable": {
         "*": false
     },
-    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestOnTriggerCharacters": true,
     "editor.wordBasedSuggestions": "off",
-    "editor.parameterHints.enabled": false,
+    "editor.parameterHints.enabled": true,
     "editor.quickSuggestions": {
         "other": false,
         "comments": false,
