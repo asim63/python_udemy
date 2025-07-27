@@ -19,4 +19,4 @@ def add_new_country (new_country,a,b):
 
 
 add_new_country("Russia",2,["Moscow","Saint Pertersburg"])
-print(travel_log)
+print(travel_log[0]['country'])
