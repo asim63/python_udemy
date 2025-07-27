@@ -25,6 +25,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 14   | Higher or Lower Game | ✅ Completed |
 | 15   | Coffee Machine | ✅ Completed |
 | 16   | Object Oriented Programming | ✅ Completed |
+| 17   | The Quiz Project | ✅ Completed |
 ---
 
 ## 📌 Course Details
