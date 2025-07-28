@@ -26,6 +26,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 15   | Coffee Machine | ✅ Completed |
 | 16   | Object Oriented Programming | ✅ Completed |
 | 17   | The Quiz Project | ✅ Completed |
+| 18   | Turtle Graphics and Modules | Partially Completed |
 ---
 
 ## 📌 Course Details
