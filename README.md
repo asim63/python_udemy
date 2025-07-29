@@ -9,24 +9,24 @@ This repository contains all my daily code, projects, and progress updates as I 
 
 | Day | Topic / Project | Status |
 |-----|------------------|--------|
-| 1   | Print, Variables, and Strings | ✅ Completed |
-| 2   | Type conversion, number manipulation, tip calculator | ✅ Completed |
-| 3   | Conditional Statements, Control Flow | ✅ Completed |
-| 4   | Randomization and List | ✅ Completed |
-| 5   | Python Looping | ✅ Completed |
-| 6   | Python functions and while loops | ✅ Completed |
-| 7   | Hangman Game | ✅ Completed |
-| 8   | Function with inputs and Caesar Ciphar | ✅ Completed |
-| 9   | Dictionary and Blind Auction Game | ✅ Completed |
-| 10   | Function with Output, Calculator | ✅ Completed |
-| 11   | Blackjack Capstone Project| ✅ Completed |
-| 12   | Scope and Number Guessing Game| ✅ Completed |
-| 13   | Debugging | ✅ Completed |
-| 14   | Higher or Lower Game | ✅ Completed |
-| 15   | Coffee Machine | ✅ Completed |
-| 16   | Object Oriented Programming | ✅ Completed |
-| 17   | The Quiz Project | ✅ Completed |
-| 18   | Turtle Graphics and Modules | Partially Completed |
+| 1   | Print, Variables, and Strings | Completed |
+| 2   | Type conversion, number manipulation, tip calculator | Completed |
+| 3   | Conditional Statements, Control Flow | Completed |
+| 4   | Randomization and List | Completed |
+| 5   | Python Looping | Completed |
+| 6   | Python functions and while loops | Completed |
+| 7   | Hangman Game | Completed |
+| 8   | Function with inputs and Caesar Ciphar | Completed |
+| 9   | Dictionary and Blind Auction Game | Completed |
+| 10   | Function with Output, Calculator | Completed |
+| 11   | Blackjack Capstone Project| Completed |
+| 12   | Scope and Number Guessing Game| Completed |
+| 13   | Debugging | Completed |
+| 14   | Higher or Lower Game | Completed |
+| 15   | Coffee Machine | Completed |
+| 16   | Object Oriented Programming | Completed |
+| 17   | The Quiz Project | Completed |
+| 18   | Turtle Graphics and GUI | Completed |
 ---
 
 ## 📌 Course Details
