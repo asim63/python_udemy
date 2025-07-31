@@ -7,5 +7,5 @@ def move_forward():
     t.fd(10)
 
 screen.listen()
-screen.onkey(fun = move_forward, key = "space")
+screen.onkey(move_forward,"space")
 screen.exitonclick()
