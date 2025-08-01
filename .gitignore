@@ -1,2 +1,4 @@
 # vscode configuration
 .vscode/
+
+__pycache__/
