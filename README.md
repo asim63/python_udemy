@@ -27,7 +27,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | 16   | Object Oriented Programming | Completed |
 | 17   | The Quiz Project | Completed |
 | 18   | Turtle Graphics and GUI | Completed |
-| 19   | Event listener | Partially done |
+| 19   | Event listener and Turtle Race | Completely |
 ---
 
 ## 📌 Course Details
