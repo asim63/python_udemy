@@ -9,27 +9,28 @@ This repository contains all my daily code, projects, and progress updates as I 
 
 | Day | Topic / Project | Status |
 |--------|------------------|--------|
-| [Day 01](./Day01) | Print, Variables, and Strings | Completed |
-| [Day 02](./Day02) | Type Conversion, Number Manipulation, Tip Calculator | Completed |
-| [Day 03](./Day03) | Conditional Statements, Control Flow | Completed |
-| [Day 04](./Day04) | Randomization and List | Completed |
-| [Day 05](./Day05) | Python Looping | Completed |
-| [Day 06](./Day06) | Python Functions and While Loops | Completed |
-| [Day 07](./Day07) | Hangman Game | Completed |
-| [Day 08](./Day08) | Functions with Inputs, Caesar Cipher | Completed |
-| [Day 09](./Day09) | Dictionary and Blind Auction Game | Completed |
-| [Day 10](./Day10) | Functions with Outputs, Calculator | Completed |
-| [Day 11](./Day11) | Blackjack Capstone Project | Completed |
-| [Day 12](./Day12) | Scope and Number Guessing Game | Completed |
-| [Day 13](./Day13) | Debugging | Completed |
-| [Day 14](./Day14) | Higher or Lower Game | Completed |
-| [Day 15](./Day15) | Coffee Machine | Completed |
-| [Day 16](./Day16) | Object Oriented Programming | Completed |
-| [Day 17](./Day17) | The Quiz Project | Completed |
-| [Day 18](./Day18) | Turtle Graphics and GUI | Completed |
-| [Day 19](./Day19) | Event Listener and Turtle Race | Completed |
-| [Day 20](./Day20) | Snake Game - Part 1 | Completed |
-| [Day 21](./Day21) | Inheritance, Slicing, Snake Game - Part 2| Completed |
+| [Day 01](./Day%2001) | Print, Variables, and Strings | Completed |
+| [Day 02](./Day%2002) | Type Conversion, Number Manipulation, Tip Calculator | Completed |
+| [Day 03](./Day%2003) | Conditional Statements, Control Flow | Completed |
+| [Day 04](./Day%2004) | Randomization and List | Completed |
+| [Day 05](./Day%2005) | Python Looping | Completed |
+| [Day 06](./Day%2006) | Python Functions and While Loops | Completed |
+| [Day 07](./Day%2007) | Hangman Game | Completed |
+| [Day 08](./Day%2008) | Functions with Inputs, Caesar Cipher | Completed |
+| [Day 09](./Day%2009) | Dictionary and Blind Auction Game | Completed |
+| [Day 10](./Day%2010) | Functions with Outputs, Calculator | Completed |
+| [Day 11](./Day%2011) | Blackjack Capstone Project | Completed |
+| [Day 12](./Day%2012) | Scope and Number Guessing Game | Completed |
+| [Day 13](./Day%2013) | Debugging | Completed |
+| [Day 14](./Day%2014) | Higher or Lower Game | Completed |
+| [Day 15](./Day%2015) | Coffee Machine | Completed |
+| [Day 16](./Day%2016) | Object Oriented Programming | Completed |
+| [Day 17](./Day%2017) | The Quiz Project | Completed |
+| [Day 18](./Day%2018) | Turtle Graphics and GUI | Completed |
+| [Day 19](./Day%2019) | Event Listener and Turtle Race | Completed |
+| [Day 20](./Day%2020) | Snake Game - Part 1 | Completed |
+| [Day 21](./Day%2021) | Inheritance, Slicing, Snake Game - Part 2| Completed |
+
 
 ---
 
