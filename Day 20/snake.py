@@ -5,23 +5,31 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 class Snake:
-
     def __init__(self):
+        self.x = 0
+        self.y = 0
         self.segment = []
         self.create_snake()
         self.head = self.segment[0]
-    
+        
     def create_snake(self):
-        x = 0
         for i in range(3):
-            self.t = Turtle()
-            self.t.shape('square')
-            self.t.penup()
-            self.t.color('white')
-            self.t.setpos(x,0)
-            self.segment.append(self.t)
-            x += -20
+            self.add_segment(self.x,self.y)
+            self.x += -20
+            self.y = 0
 
+    def add_segment(self,x,y):
+        self.t = Turtle()
+        self.t.shape('square')
+        self.t.penup()
+        self.t.color('white')
+        self.t.setpos(x,y)
+        self.segment.append(self.t)
+    
+    def extend(self):
+        new_x = self.segment[-1].xcor()
+        new_y = self.segment[-1].ycor()
+        self.add_segment(new_x,new_y)
 
     def up(self):
         if self.head.heading() != DOWN:
