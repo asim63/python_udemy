@@ -29,6 +29,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | [Day 18](./Day18) | Turtle Graphics and GUI | Completed |
 | [Day 19](./Day19) | Event Listener and Turtle Race | Completed |
 | [Day 20](./Day20) | Snake Game - Part 1 | Completed |
+| [Day 21](./Day21) | Inheritance, Slicing, Snake Game - Part 2| Completed |
 
 ---
 
