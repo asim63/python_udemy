@@ -2,6 +2,20 @@ from turtle import Turtle, Screen
 from paddle import Paddle
 import time
 from ball import Ball
+from scoreboard import Scoreboard
+def middle_bar():
+    t = Turtle()
+    t.teleport(0,-340)
+    t.color('white')
+    t.shape('square')
+    t.shapesize(3,0.6)
+    t.setheading(90)
+    while(t.ycor() < 350):
+        t.fd(40)
+        t.penup()
+        t.fd(40)
+        t.pendown()
+        
 screen = Screen()
 screen.bgcolor('black')
 screen.setup(width = 900, height = 700)
@@ -9,10 +23,14 @@ screen.title("Pong Game")
 screen.tracer(0)
 
 game_is_on = True
+middle_bar()
 paddle1 = Paddle( x= -438, y = 0)
 paddle2 = Paddle( x = 430, y = 0)
 
 ball = Ball()
+scoreboard_l = Scoreboard(-75, 290)
+scoreboard_r = Scoreboard( 50, 290)
+
 screen.listen()
 screen.onkey(paddle1.paddle_up, "w")
 screen.onkey(paddle1.paddle_down, "s")
