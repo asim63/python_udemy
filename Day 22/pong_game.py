@@ -21,9 +21,9 @@ screen.onkey(paddle2.paddle_down, "Down")
 
 
 while(game_is_on):
-    screen.update()
-    time.sleep(0.1)    
-
+    screen.update()   
+    time.sleep(0.1)
+    ball.move()
 
 screen.exitonclick()
 

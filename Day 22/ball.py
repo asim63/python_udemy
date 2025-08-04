@@ -9,6 +9,8 @@ class Ball(Turtle):
         self.penup()
         self.move()
         
-    def move(self):
+    def move(self): 
+        new_x = self.xcor() + 9
+        new_y = self.ycor() + 7
+        self.setpos(new_x,new_y)
         
-        self.setpos(430,330)
