@@ -30,7 +30,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | [Day 19](./Day%2019) | Event Listener and Turtle Race | Completed |
 | [Day 20](./Day%2020) | Snake Game - Part 1 | Completed |
 | [Day 21](./Day%2021) | Inheritance, Slicing, Snake Game - Part 2| Completed |
-| [Day 22](./Day%2022) | Pong Game| Partial |
+| [Day 22](./Day%2022) | Pong Game| Completed |
 
 ---
 
