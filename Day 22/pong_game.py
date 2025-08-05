@@ -3,6 +3,7 @@ from paddle import Paddle
 import time
 from ball import Ball
 from scoreboard import Scoreboard
+import random
 def middle_bar():
     t = Turtle()
     t.teleport(0,-340)
@@ -40,8 +41,35 @@ screen.onkey(paddle2.paddle_down, "Down")
 
 while(game_is_on):
     screen.update()   
-    time.sleep(0.1)
+    time.sleep(0.08)
     ball.move()
+    
+    #detect collision with wall
+    if ball.ycor() > 330 or ball.ycor() < -330:
+        ball.bounce()        
 
+    elif paddle1.xcor() - 20 < ball.xcor() < paddle1.xcor() + 20 and paddle1.ycor() -50 < ball.ycor() < paddle1.ycor() + 50:
+        if paddle1.ycor() -30 > ball.ycor() < paddle1.ycor() + 30:
+            ball.y_move += random.randint(3,6)
+        else:
+            ball.y_move -= random.randint(0,3)
+        ball.bounce_with_paddle()
+        
+    elif paddle2.xcor() - 20 < ball.xcor() < paddle2.xcor() + 20 and paddle2.ycor() -50 < ball.ycor() < paddle2.ycor() + 50:
+        if paddle2.ycor() -30 > ball.ycor() < paddle2.ycor() + 30:
+            ball.y_move += random.randint(3,6)
+        else:
+            ball.y_move -= random.randint(0,3)
+        ball.bounce_with_paddle()
+     
+    elif ball.xcor() > 450:
+        ball.reball()
+        scoreboard_l.increment()
+        
+    elif ball.xcor() < -450:
+        ball.reball()
+        scoreboard_r.increment()
+        
+        
 screen.exitonclick()
 

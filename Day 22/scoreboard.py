@@ -8,3 +8,8 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.color('white')
         self.write(self.score, font = FONT )
+        
+    def increment(self):
+        self.clear()
+        self.score +=1 
+        self.write(self.score, font = FONT)
