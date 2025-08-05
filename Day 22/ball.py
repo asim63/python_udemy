@@ -11,12 +11,14 @@ class Ball(Turtle):
         self.x_move = random.choice(self.list)
         self.y_move = random.randint(-10,10)
         self.move()
+        self.move_speed = 0.0405
 
     def reball(self):
         self.goto(0,0)
         self.color('white')
         self.x_move = random.choice(self.list)
         self.y_move = random.randint(-10,10)
+        self.move_speed = 0.0405
         self.move()
       
     def move(self): 
@@ -26,9 +28,11 @@ class Ball(Turtle):
     
     def bounce(self):
         self.y_move *= -1
+        self.move_speed *= 0.97
         
     def bounce_with_paddle(self):
         self.x_move *= -1
+        self.move_speed *= 0.97
         
         
     #detect collision

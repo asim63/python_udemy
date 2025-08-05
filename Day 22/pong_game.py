@@ -5,7 +5,6 @@ from ball import Ball
 from scoreboard import Scoreboard
 import random
 
-SPEED = 0.05
 def middle_bar():
     t = Turtle()
     t.teleport(0,-340)
@@ -43,13 +42,12 @@ screen.onkeypress(paddle2.paddle_down, "Down")
 
 while(game_is_on):
     screen.update()   
-    time.sleep(SPEED)
+    time.sleep(ball.move_speed)
     ball.move()
     
     #detect collision with wall
     if ball.ycor() > 330 or ball.ycor() < -330:
         ball.bounce()        
-        SPEED -= 0.0001
 
     elif paddle1.xcor() - 15 < ball.xcor() < paddle1.xcor() + 15 and ball.distance(paddle1) < 50:
         
@@ -59,7 +57,6 @@ while(game_is_on):
         else:
             ball.y_move -= random.randint(0,3)
         ball.bounce_with_paddle()
-        SPEED -= 0.0001
         
     elif paddle2.xcor() - 15 < ball.xcor() < paddle2.xcor() + 15 and ball.distance(paddle2) < 50:
         #more deviation on edges
@@ -74,20 +71,18 @@ while(game_is_on):
             else:
                 ball.y_move -= random.randint(0,3)
         ball.bounce_with_paddle()
-        SPEED -= 0.0001
+
         
     elif ball.xcor() > 450:
         ball.reball()
         scoreboard_l.increment()
-        SPEED -= 0.0001
+
         
     elif ball.xcor() < -450:
         ball.reball()
         scoreboard_r.increment()
-        SPEED -= 0.0001
-        
-    if SPEED < 0:
-        SPEED *= -1
+
+
       
 screen.exitonclick()
 
