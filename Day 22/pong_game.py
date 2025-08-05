@@ -4,6 +4,8 @@ import time
 from ball import Ball
 from scoreboard import Scoreboard
 import random
+
+SPEED = 0.05
 def middle_bar():
     t = Turtle()
     t.teleport(0,-340)
@@ -33,43 +35,59 @@ scoreboard_l = Scoreboard(-75, 290)
 scoreboard_r = Scoreboard( 50, 290)
 
 screen.listen()
-screen.onkey(paddle1.paddle_up, "w")
-screen.onkey(paddle1.paddle_down, "s")
-screen.onkey(paddle2.paddle_up, "Up")
-screen.onkey(paddle2.paddle_down, "Down")
+screen.onkeypress(paddle1.paddle_up, "w")
+screen.onkeypress(paddle1.paddle_down, "s")
+screen.onkeypress(paddle2.paddle_up, "Up")
+screen.onkeypress(paddle2.paddle_down, "Down")
 
 
 while(game_is_on):
     screen.update()   
-    time.sleep(0.08)
+    time.sleep(SPEED)
     ball.move()
     
     #detect collision with wall
     if ball.ycor() > 330 or ball.ycor() < -330:
         ball.bounce()        
+        SPEED -= 0.0001
 
-    elif paddle1.xcor() - 20 < ball.xcor() < paddle1.xcor() + 20 and paddle1.ycor() -50 < ball.ycor() < paddle1.ycor() + 50:
-        if paddle1.ycor() -30 > ball.ycor() < paddle1.ycor() + 30:
-            ball.y_move += random.randint(3,6)
-        else:
-            ball.y_move -= random.randint(0,3)
-        ball.bounce_with_paddle()
+    elif paddle1.xcor() - 15 < ball.xcor() < paddle1.xcor() + 15 and ball.distance(paddle1) < 50:
         
-    elif paddle2.xcor() - 20 < ball.xcor() < paddle2.xcor() + 20 and paddle2.ycor() -50 < ball.ycor() < paddle2.ycor() + 50:
-        if paddle2.ycor() -30 > ball.ycor() < paddle2.ycor() + 30:
+        #more deviation up on edges
+        if paddle1.ycor() -35 > ball.ycor() < paddle1.ycor() + 35:
             ball.y_move += random.randint(3,6)
         else:
             ball.y_move -= random.randint(0,3)
         ball.bounce_with_paddle()
-     
+        SPEED -= 0.0001
+        
+    elif paddle2.xcor() - 15 < ball.xcor() < paddle2.xcor() + 15 and ball.distance(paddle2) < 50:
+        #more deviation on edges
+        if paddle2.ycor() -35 > ball.ycor() < paddle2.ycor() + 35:
+            if ball.y_move < 0:
+                ball.y_move -= random.randint(3,6)
+            else:
+                ball.y_move += random.randint(3,6)
+        else:
+            if ball.y_move < 0:
+                ball.y_move += random.randint(0,3)
+            else:
+                ball.y_move -= random.randint(0,3)
+        ball.bounce_with_paddle()
+        SPEED -= 0.0001
+        
     elif ball.xcor() > 450:
         ball.reball()
         scoreboard_l.increment()
+        SPEED -= 0.0001
         
     elif ball.xcor() < -450:
         ball.reball()
         scoreboard_r.increment()
+        SPEED -= 0.0001
         
-        
+    if SPEED < 0:
+        SPEED *= -1
+      
 screen.exitonclick()
 

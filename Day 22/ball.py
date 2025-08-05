@@ -7,14 +7,15 @@ class Ball(Turtle):
         self.color('white')
         self.shape('circle')
         self.penup()
-        self.x_move = 10
+        self.list = [-10,10]
+        self.x_move = random.choice(self.list)
         self.y_move = random.randint(-10,10)
         self.move()
 
     def reball(self):
         self.goto(0,0)
         self.color('white')
-        self.x_move = 10
+        self.x_move = random.choice(self.list)
         self.y_move = random.randint(-10,10)
         self.move()
       
