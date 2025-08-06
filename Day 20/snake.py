@@ -18,13 +18,13 @@ class Snake:
             self.x += -20
             self.y = 0
 
-    def add_segment(self,x,y):
-        self.t = Turtle()
-        self.t.shape('square')
-        self.t.penup()
-        self.t.color('white')
-        self.t.setpos(x,y)
-        self.segment.append(self.t)
+    def add_segment(self, x, y):
+        segment = Turtle('square')
+        segment.penup()
+        segment.color('white')
+        segment.setpos(x, y)
+        self.segment.append(segment)
+
     
     def extend(self):
         new_x = self.segment[-1].xcor()
