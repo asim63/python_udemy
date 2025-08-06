@@ -18,3 +18,8 @@ class Scoreboard(Turtle):
         self.clear()
         self.level += 1
         self.update()
+    
+    def gameover(self):
+        self.color = 'white'
+        self.goto(0,0)
+        self.write("GAMEOVER!!", align = 'center', font = FONT)

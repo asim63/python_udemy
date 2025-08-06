@@ -26,10 +26,20 @@ while game_is_on:
         car_manager.create_a_car()
         
     car_manager.move_cars()
+    
     if player.ycor() > 280:
         player.touch_the_line()
         scoreboard.increment()
     
+    #collide with cars
+    for car in car_manager.cars:
+        if abs(player.xcor() - car.xcor()) < 15 and player.distance(car)<15:
+            #collide
+            screen.clear()
+            scoreboard.gameover()
+            
+            
+            
     
     
          
