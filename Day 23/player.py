@@ -14,6 +14,9 @@ class Player(Turtle):
         
     def move_up(self):
         self.fd(MOVE_DISTANCE)
+        
+    def move_down(self):
+        self.bk(MOVE_DISTANCE)
 
     def touch_the_line(self):
         self.teleport(*STARTING_POSITION)

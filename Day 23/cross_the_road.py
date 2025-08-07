@@ -13,33 +13,34 @@ player = Player()
 scoreboard= Scoreboard()
 
 screen.listen()
-screen.onkey(player.move_up,"Up")
-screen.onkey(player.move_up,"w")
+screen.onkeypress(player.move_up,"Up")
+screen.onkeypress(player.move_up,"w")
+screen.onkeypress(player.move_down,"Down")
+screen.onkeypress(player.move_down,"s")
 
 car_manager = CarManager()
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(0.06)
     screen.update()
-    if random.randint(1,6) == 2:
-        car_manager.create_a_car()
-        
+
+    car_manager.create_a_car() 
     car_manager.move_cars()
     
     if player.ycor() > 280:
         player.touch_the_line()
         scoreboard.increment()
+        car_manager.level_increase()
     
     #collide with cars
     for car in car_manager.cars:
-        if abs(player.xcor() - car.xcor()) < 15 and player.distance(car)<15:
-            #collide
+        if abs(player.ycor() - car.ycor()) < 20 and player.distance(car) < 20:
             screen.clear()
             scoreboard.gameover()
+            game_is_on = False
             
-            
-            
-    
+screen.exitonclick()
+        
     
          
