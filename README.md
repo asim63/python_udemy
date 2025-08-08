@@ -32,6 +32,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | [Day 21](./Day%2021) | Inheritance, Slicing, Snake Game - Part 2| Completed |
 | [Day 22](./Day%2022) | Pong Game| Completed |
 | [Day 23](./Day%2023) | Turtle Crossing Capsule Project | Completed |
+| [Day 24](./Day%2024) | File System, Directories | Partially done |
 
 ---
 
