@@ -1,24 +1,21 @@
-with open(r"Day 25/weather_data.csv") as data_file:
-    data = data_file.readlines()
-    print(data)
+# with open(r"Day 25/weather_data.csv") as data_file:
+#     data = data_file.readlines()
+#     print(data)
     
-import csv
-with open(r"Day 25/weather_data.csv") as data_file:
-    data = csv.reader(data_file)
-    print(data)
-    # for row in data:
-    #     temperature = int(row[1])
-    #     print(temperature)
-        
-    next(data)
-    for row in data:
-        temperature = int(row[1])
-        print(temperature)
-        
-    # print(data)
-    # # temp = []
-    # for row in data:
-        
-    #     temperature = int(row[1])
-    #     print(temperature)
-        
+# import csv
+# with open(r"Day 25/weather_data.csv") as data_file:
+#     data = csv.reader(data_file)
+#     temp = []
+
+#     # skips header    
+#     next(data)
+    
+#     for row in data:
+#         temperature = int(row[1])
+#         temp.append(temperature)
+
+
+import pandas
+
+data = pandas.read_csv("Day 25/weather_data.csv")
+print(data["temp"])
