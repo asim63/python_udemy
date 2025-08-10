@@ -19,3 +19,6 @@ with open(r"Day 24\new_file.txt", mode = 'a') as file:
 with open(r"..\..\new_file.txt", mode = 'r') as file:
     contents = file.read()
     print(contents)
+    
+# ..\..\ goes back twice
+
