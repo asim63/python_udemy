@@ -33,6 +33,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | [Day 22](./Day%2022) | Pong Game| Completed |
 | [Day 23](./Day%2023) | Turtle Crossing Capsule Project | Completed |
 | [Day 24](./Day%2024) | File System, Path and Directories | Completed |
+| [Day 25](./Day%2025) | Working with CSV data and Pandas Library | Partially done |
 
 ---
 
