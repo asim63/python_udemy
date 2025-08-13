@@ -27,17 +27,19 @@ while (len(correct_guess) < 50):
     if answer_state == "Exit":
         break
 print(correct_guess)
-unguessed_state = []
+# unguessed_state = []
 unguessed_x = []
 unguessed_y = []
-for state in data.state.values:
-    if state not in correct_guess:
-        unguessed_state.append(state)
+
+unguessed_state = [state for state in data.state.values if state not in correct_guess]
+# for state in data.state.values:
+#     if state not in correct_guess:
+#         unguessed_state.append(state)
 # unguessed_data = {
 #     "state" : unguessed_state,
 
 # }
-
+print(unguessed_state)
 # print(unguessed_state)
 states_to_learn = pd.DataFrame(unguessed_state)
 states_to_learn.to_csv("Day 25/us-states-game-start/states_to_learn.csv")
