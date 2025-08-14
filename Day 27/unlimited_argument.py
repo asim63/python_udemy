@@ -9,13 +9,22 @@
 
 
 
-def calculate(n,**kwargs):
-    print(kwargs)
-    print(n)
-    # for(key,value) in kwargs.items():
-    n += kwargs['add']
-    print(n)
-    n *= kwargs['multiply']
-    return n
+# def calculate(n,**kwargs):
+#     print(kwargs)
+#     # for(key,value) in kwargs.items():
+#     n += kwargs['add']
+#     n *= kwargs['multiply']
+#     return n
     
-print(calculate(2, add = 3, multiply = 5))
+# print(calculate(2, add = 3, multiply = 5))
+
+class Car:
+    
+    def __init__(self, **kw):
+        self.make = kw.get('make')
+        self.model = kw.get('model')
+        self.color = kw.get('color')
+        
+my_car = Car(make ="Nissan", color = 'Blue')
+print(my_car.model)
+print(my_car.color)
