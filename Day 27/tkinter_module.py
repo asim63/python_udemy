@@ -13,7 +13,7 @@ my_label.pack()
 #button
 def button_clicked():
     #you can change text like this as well
-    my_label['text'] = input.get()
+    my_label.config(text = input.get())
     my_label.pack()
 
 button = Button(text = "Click me", command = button_clicked) #tkinter.Button
