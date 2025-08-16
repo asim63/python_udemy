@@ -36,6 +36,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | [Day 25](./Day%2025) | Working with CSV data and Pandas Library | Completed |
 | [Day 26](./Day%2026) | List Comprehension and the NATO Alphabet | Completed |
 | [Day 27](./Day%2027) | Tkinter, args, kwargs and Creating GUI Programs | Completed |
+| [Day 28](./Day%2028) | Tkinter, Dynamic Typing and Pomodoro GUI Application | Completed |
 ---
 
 ## Course Details
