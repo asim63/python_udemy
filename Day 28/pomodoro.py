@@ -9,11 +9,22 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps =0
+tick = ''
+timer = None
 # ---------------------------- TIMER RESET ------------------------------- # 
+def reset_timer():
+    global tick
+    global reps
+    reps = 0
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text = "00:00")
+    label.config(text = "TIMER", fg = GREEN)
+    tick = ""
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
     global reps
+    global tick
     reps += 1
     work_sec = WORK_MIN * 60
     short_break_sec = SHORT_BREAK_MIN * 60
@@ -23,6 +34,7 @@ def start_timer():
         countdown(long_break_sec)
         label.config(text = "BREAK", fg = RED)
         reps = 0
+        tick = ''
     elif reps % 2 == 0 :
         countdown(short_break_sec)
         label.config(text = "BREAK", fg = PINK)
@@ -30,27 +42,25 @@ def start_timer():
         countdown(work_sec)
         label.config(text = "WORK", fg = GREEN)
 
-def reset_timer():
-    # canvas.itemconfig(timer_text, text = "00:00")
-    # window.after(1000, countdown, 0)
-    pass
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def countdown(count):
     global reps
+    global tick
+    global timer
     seconds = count % 60
     minutes = count // 60
     if seconds < 10:
         seconds = f'0{seconds}'
-        
-    if minutes == 0 and seconds == 0:
-        reps += 1
-    
+
     canvas.itemconfig(timer_text, text = f"{minutes}:{seconds}")
     if count > 0 :
-       window.after(2, countdown, count - 1)
+       timer = window.after(2, countdown, count - 1)
     else:
         start_timer()
-
+        #for tick marks
+        if reps%2 == 0 :
+            tick = f"✔{tick}"
+            label2.config(text = f"{tick}")
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
@@ -80,7 +90,7 @@ button2.grid(row = 2,column = 2)
 button2.config(padx = 5, pady = 2)
 
 #checkmark
-label2 = Label(text = "✔", font = (FONT_NAME, 14),  bg = YELLOW, fg = GREEN)
+label2 = Label(font = (FONT_NAME, 14),  bg = YELLOW, fg = GREEN)
 label2.grid(row = 3,column = 1)
 
 
