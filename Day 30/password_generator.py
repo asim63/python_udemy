@@ -2,6 +2,7 @@ from tkinter import *
 import random
 from tkinter import messagebox
 import pyperclip
+import json
 YELLOW = "#f7f5dd"
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_pw():
@@ -37,19 +38,32 @@ def save():
     website_name = input1.get()
     email_name = input2.get()
     password_name = input3.get()
-    
+    new_data = {
+        website_name: {
+            "email": email_name,
+            "password": password_name,
+        }
+    }
     if website_name == "" or email_name == "" or password_name == "":
         messagebox.showerror(title = "Error 404", message = "Please dont leave any fields empty")
     
     else:
-        is_ok = messagebox.askokcancel(title = "website", message = f"These are the details entered:\nEmail : {email_name}\n"
-                            f"Password : {password_name}\n\nIs it ok to save?")
-        if is_ok == True:
-            with open("Day 29/ data.txt", mode = 'a') as file:
-                file.write(f"{website_name} | {email_name} | {password_name}\n")
+        with open("Day 30/ data.json", mode = 'r') as file:
+            data = json.load(file)
+            data.update(new_data)
+            
+        with open("Day 30/ data.json",mode = 'w') as file:
+            json.dump(data, file, indent = 4)
         input1.delete(0,END)
         input3.delete(0,END)
 
+def search():
+    with open("Day 30/ data.json", mode = 'r') as file:
+        website_name = input1.get()
+        for key in json.load(file):
+            if website_name == key:
+                messagebox.Message(f"email : {key['email']}\npassword : {key['password']}")
+        
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -74,8 +88,8 @@ pw = Label(text = "Password:", bg = YELLOW)
 pw.grid(row = 3, column = 0)
 
 #entry-1
-input1 = Entry(width = 52)
-input1.grid(row = 1, column = 1, columnspan = 2)
+input1 = Entry(width = 33)
+input1.grid(row = 1, column = 1)
 input1.focus()
 
 #entry-2
@@ -94,5 +108,10 @@ genpw.grid(row = 3, column = 2)
 #button-2
 add = Button(text = "Add", width = 44, command = save)
 add.grid(row = 4, column = 1, columnspan = 2)
+
+#button-3
+search_web = Button(text = "Search",width = 15, command = search)
+search_web.grid(row = 1, column = 2)
+
 
 window.mainloop()
