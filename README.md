@@ -39,7 +39,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | [Day 28](./Day%2028) | Tkinter, Dynamic Typing and Pomodoro GUI Application | Completed |
 | [Day 29](./Day%2029) | Building a Password Manager GUI APP with Tkinter | Completed |
 | [Day 30](./Day%2030) | Errors, Exceptions and JSON Data Improving Password | Completed |
-
+| [Day 31](./Day%2031) | Flash Card App Capstone Project | Getting Started |
 ---
 
 ## Course Details
