@@ -54,7 +54,7 @@ def countdown(count):
 
     canvas.itemconfig(timer_text, text = f"{minutes}:{seconds}")
     if count > 0 :
-       timer = window.after(2, countdown, count - 1)
+       timer = window.after(1000, countdown, count - 1)
     else:
         start_timer()
         #for tick marks
