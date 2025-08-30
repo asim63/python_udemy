@@ -29,7 +29,9 @@ def show_card():
     window.after(1000, show_card)
     
     canvas1.grid(row = 0, column = 0, columnspan = 2)
+    
 #UI setup
+
 window = Tk()
 window.config(padx = 50,pady = 50,bg = BACKGROUND_COLOR)
 window.title("Flash")
