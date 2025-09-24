@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 import pandas as pd
+import json 
 
 BACKGROUND_COLOR = "#B1DDC6"
 iknow_list = []
@@ -11,24 +12,41 @@ spanish_words = data['Spanish'].to_list()
 # print(spanish_words)
 
 #functions
-def iknow(s):
+def iknow(s,e):
     global iknow_list
     iknow_list.append(s)
-    print(iknow_list)
-    show_card()
-
-def countdown(count):
-    global timer
-    if count > 0 :
-        timer = window.after(3000, countdown, count-1)
-        # print(timer)
+    # print(iknow_list)
+    new_data = {
+        s : e
+    }
+    try:
+        with open(r"Day 31\words_i_know.json", mode = "r") as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        data = {}
         
-    else:
-        show_card()
-
-def dontknow():
-    show_card()
+    data.update(new_data)
     
+    with open(r"Day 31\words_i_know.json", mode = "w") as file:
+        json.dump(data, file, indent = 4)
+        
+    show_card()
+
+def dontknow(s,e):
+    show_card()
+    new_data = {
+        s : e
+    }
+    try:
+        with open(r"Day 31\words_to_learn.json", mode = "r") as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        data = {}
+        
+    data.update(new_data)
+    
+    with open(r"Day 31\words_to_learn.json", mode = "w") as file:
+        json.dump(data, file, indent = 4)
 
 def get_words():
     global iknow_list
@@ -74,10 +92,10 @@ canvas1.grid(row = 0, column = 0, columnspan = 2)
 # my_image = PhotoImage(file="path/to/image_file.png")
 # button = Button(image=my_image, highlightthickness=0)
 
-button1 = Button(image = right_image,bg = BACKGROUND_COLOR, highlightthickness = 0,command = lambda: iknow(s))
+button1 = Button(image = right_image,bg = BACKGROUND_COLOR, highlightthickness = 0,command = lambda: iknow(s,e))
 button1.grid(column = 1, row = 1)
 
-button2 = Button(image = wrong_image,bg = BACKGROUND_COLOR, highlightthickness = 0, command = lambda: dontknow())
+button2 = Button(image = wrong_image,bg = BACKGROUND_COLOR, highlightthickness = 0, command = lambda: dontknow(s,e))
 button2.grid(column = 0, row = 1)
 
 show_card()
