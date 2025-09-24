@@ -1,0 +1,6 @@
+import pandas as pd
+import random
+data = pd.read_csv(r"Day 31\spanish-english.csv")
+word = random.choice(data['Spanish'])
+print(word)
+print(data.English[data.Spanish.values == word].values[0])
