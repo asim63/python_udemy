@@ -19,6 +19,7 @@ def iknow(s,e):
     new_data = {
         s : e
     }
+    # insert in json file
     try:
         with open(r"Day 31\words_i_know.json", mode = "r") as file:
             data = json.load(file)
@@ -26,7 +27,7 @@ def iknow(s,e):
         data = {}
         
     data.update(new_data)
-    
+    # insert in json file
     with open(r"Day 31\words_i_know.json", mode = "w") as file:
         json.dump(data, file, indent = 4)
         
