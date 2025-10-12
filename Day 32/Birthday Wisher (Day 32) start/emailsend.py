@@ -1,0 +1,12 @@
+import smtplib 
+
+my_email = "dummyperson345@gmail.com"
+password = "imab ujjw qpbq idht "
+
+with smtplib.SMTP("smtp.gmail.com") as connection:
+    connection.starttls()
+    connection.login(user= my_email, password= password)
+    connection.sendmail(from_addr = my_email,
+                        to_addrs = "asimdkt64@gmail.com",
+                        msg = "Subject:Happy Birthday!!\n\n Happy birthday my g."
+                        )

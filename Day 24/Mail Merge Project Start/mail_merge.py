@@ -4,7 +4,7 @@ with open(r"Day 24\Mail Merge Project Start\Input\Letters\starting_letter.txt") 
         name_list = name_file.readlines()
         text = file.read()
         # print(text)
-        # print(name_list)
+        print(name_list)
         for name in name_list:
             name = name.strip()
             # print(name)
