@@ -7,8 +7,8 @@ now = dt.datetime.now()
 today_month = now.month
 today_date = now.day
 
-data = pd.read_csv(r"Day 32\Birthday_Wisher\birthdays.csv")
-
+data =pd.read_csv("Day 32/Birthday_wisher/birthdays.csv")
+# data =pd.read_csv("birthdays.csv")
 #to access the same row or column loc is used
 # date = data.loc[data['month'] == month, 'day'].values[0]
 
@@ -29,7 +29,8 @@ if today_month in data.month.values:
     name = data.loc[(data['month'] == today_month) & (data['day'] == date), 'name'].values[0]
     
     if date == today_date:
-        chosen_file = fr"Day 32\Birthday_Wisher\letter_templates\letter_{random.randint(1,3)}.txt"
+        chosen_file = f"Day 32/Birthday_Wisher/letter_templates/letter_{random.randint(1,3)}.txt"
+        # chosen_file = f"letter_templates/letter_{random.randint(1,3)}.txt"
         with open(chosen_file, mode ='r') as file:
             content = file.read()
             message = content.replace("[NAME]",name)
@@ -38,7 +39,7 @@ if today_month in data.month.values:
             my_email = "dummyperson345@gmail.com"
             password = "imab ujjw qpbq idht "
             birthday_email = data.loc[data['name']== name, 'email'].values[0]
-            print(birthday_email)
+            # print(birthday_email)
             connection = smtplib.SMTP("smtp.gmail.com")
             connection.starttls()
             connection.login(user = my_email, password = password)
