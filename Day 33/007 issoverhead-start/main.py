@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 import smtplib
+import time
 
 MY_LAT= 27.688123
 MY_LONG = 85.375863
@@ -43,20 +44,19 @@ def dark_or_not():
         return True
     else:
         return False 
-    
-# if close_or_not() and dark_or_not():
-if True:
-    with smtplib.SMTP("smtp.gmail.com") as connection:
-        connection.starttls()
-        connection.login(user = MY_EMAIL, password = password)
-        connection.sendmail(from_addr = MY_EMAIL,
-                            to_addrs= "asimdkt64@gmail.com",
-                            msg="Subject: LOOK UP FOR ISS\n\nHEY the ISS can be seen in the sky go out and watch the sky."
-                            )
-#If the ISS is close to my current position
-# and it is currently dark
-# Then send me an email to tell me to look up.
-# BONUS: run the code every 60 seconds.
+
+while True:
+    time.sleep(300)
+    if close_or_not() and dark_or_not():
+    # if True:
+        with smtplib.SMTP("smtp.gmail.com") as connection:
+            connection.starttls()
+            connection.login(user = MY_EMAIL, password = password)
+            connection.sendmail(from_addr = MY_EMAIL,
+                                to_addrs= "asimdkt64@gmail.com",
+                                msg="Subject: LOOK UP FOR ISS\n\nHEY the ISS can be seen in the sky go out and watch the sky."
+                                )
+
 
 
 
