@@ -42,6 +42,7 @@ This repository contains all my daily code, projects, and progress updates as I 
 | [Day 31](./Day%2031) | Flash Card App Capstone Project | Completed |
 | [Day 32](./Day%2032) | Send Email and Manage Datetime | Completed |
 | [Day 33](./Day%2033) | API and ISS Overhead Notifier | Completed |
+| [Day 34](./Day%2034) | Creating a GUI Quiz App | Completed |
 ---
 
 ## Course Details
